@@ -1,0 +1,85 @@
+# ##############################################################################
+# PRODUCTION-READY .GITIGNORE FOR NORVANE (NEXT.JS + TYPESCRIPT)
+# ##############################################################################
+
+# Dependencies
+node_modules/
+/jspm_packages/
+/web_modules/
+
+# Next.js Build and Cache
+.next/
+out/
+
+# Production Builds
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts.cache
+
+# Debug logs and Lockfiles
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Environment Secrets & Local Configurations
+# (Never commit actual credentials/keys to Git!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.local
+.env*.local
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS (macOS and Windows) Junk Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon_
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Testing and Coverage
+coverage/
+.nyc_output/
+.jest/
+
+# Caches and Temporary Files
+.eslintcache
+.stylelintcache
+.turbo/
+.cache/
+.parcel-cache
+tmp/
+temp/
+
+# Python Virtual Environments (in case of future integration)
+.venv/
+venv/
+env/
+ENV/
+pyvenv.cfg
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Supabase / Firebase (in case of future integration)
+.supabase/
+.firebase/
