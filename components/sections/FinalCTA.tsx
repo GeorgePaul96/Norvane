@@ -9,10 +9,10 @@ export default function FinalCTA() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50 relative overflow-hidden">
+    <section id="contact" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50 relative overflow-hidden border-t dark:border-white/[0.04] border-black/[0.04]">
       {/* Background elements */}
       <div
-        className="absolute inset-0 dark:opacity-100 opacity-40"
+        className="absolute inset-0 dark:opacity-100 opacity-40 pointer-events-none"
         style={{
           backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)",
           backgroundSize: "40px 40px",
@@ -30,7 +30,7 @@ export default function FinalCTA() {
         >
           <div className="h-px w-8 dark:bg-steel-500/60 bg-steel-500/40" />
           <span className="text-2xs font-semibold tracking-widest-2 uppercase dark:text-steel-400 text-steel-600">
-            Get Started
+            Operational Dialogue
           </span>
           <div className="h-px w-8 dark:bg-steel-500/60 bg-steel-500/40" />
         </motion.div>
@@ -42,7 +42,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="text-4xl md:text-5xl lg:text-6xl font-semibold dark:text-ink-100 text-ink-900 leading-tight tracking-tight text-balance mb-6"
         >
-          Bring structure to operational complexity.
+          Good operations are rarely accidental.
         </motion.h2>
 
         {/* Subheadline */}
@@ -52,11 +52,11 @@ export default function FinalCTA() {
           transition={{ duration: 0.7, delay: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="text-lg md:text-xl dark:text-ink-300 text-ink-400 leading-relaxed mb-12 max-w-2xl mx-auto"
         >
-          Norvane helps businesses improve coordination, visibility, and operational
-          decision-making through practical systems and modern operational intelligence.
+          We construct the database bridges, planning cadences, and internal tools that build 
+          resilience into daily routines. Let's discuss where coordination breaks down in your business.
         </motion.p>
 
-        {/* CTA */}
+        {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -65,21 +65,21 @@ export default function FinalCTA() {
         >
           <a
             href="mailto:hello@norvane.com"
-            className="group inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md text-sm font-semibold dark:bg-ink-100 bg-ink-900 dark:text-ink-900 text-ink-100 hover:dark:bg-white hover:bg-ink-800 transition-all duration-200 shadow-lg shadow-black/20"
+            className="group inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md text-sm font-semibold dark:bg-ink-100 bg-ink-900 dark:text-ink-900 text-ink-100 hover:dark:bg-white hover:bg-ink-800 transition-all duration-200 shadow-lg shadow-black/20 cursor-pointer"
           >
-            Schedule a Diagnostic
+            Book an Operational Diagnostic
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform duration-200" />
           </a>
           <a
             href="mailto:hello@norvane.com"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md text-sm font-medium dark:text-ink-300 text-ink-500 hover:dark:text-ink-100 hover:text-ink-900 transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md text-sm font-medium dark:text-ink-300 text-ink-500 hover:dark:text-ink-100 hover:text-ink-900 transition-colors duration-200 cursor-pointer"
           >
             <Mail size={14} />
             hello@norvane.com
           </a>
         </motion.div>
 
-        {/* Reassurance */}
+        {/* Reassurance items */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
@@ -87,9 +87,9 @@ export default function FinalCTA() {
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10"
         >
           {[
-            "No obligation initial conversation",
+            "No obligation introductory dialogue",
             "Confidential by default",
-            "Sector-experienced team",
+            "Structured execution roadmap",
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full dark:bg-steel-500/60 bg-steel-500/50" />

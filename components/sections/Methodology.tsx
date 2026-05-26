@@ -7,50 +7,50 @@ const phases = [
   {
     number: "01",
     title: "Diagnose",
-    tagline: "Understand before designing",
+    tagline: "Understand local habits and bottlenecks",
     description:
-      "We conduct structured interviews, process observations, and data reviews to build an accurate picture of your operational reality — including the constraints and tensions that rarely appear in formal documentation.",
-    outputs: ["Operational assessment report", "Constraint map", "Priority matrix"],
+      "We conduct intensive field observations, data flow path audits, and structured interviews with execution teams to expose the hidden friction, coordination gaps, and key-person dependencies that trailing reports mask.",
+    outputs: ["Coordination Risk Audit", "Spreadsheet Registry", "Priority Modernization Blueprint"],
   },
   {
     number: "02",
     title: "Map",
-    tagline: "Document how work actually flows",
+    tagline: "Document how actual work flows",
     description:
-      "Every relevant process, handoff, decision point, and information flow is documented in precise, legible form. This is the reference layer everything else builds from.",
-    outputs: ["Process maps", "Information flow diagrams", "Role and responsibility matrices"],
+      "We map out every single process handoff, data entry step, buffer constraint, and communication pipeline. Not the idealized version written in corporate manuals, but the messy, actual operational path.",
+    outputs: ["High-Fidelity Process Maps", "Endpoint Data-Flow Blueprints", "Handoff Vulnerability Matrices"],
   },
   {
     number: "03",
     title: "Structure",
-    tagline: "Design the improved system",
+    tagline: "Design custom operational architecture",
     description:
-      "We design the new operational architecture — process flows, coordination mechanisms, reporting structures, and decision frameworks — built specifically for your context.",
-    outputs: ["Redesigned process architecture", "Systems specification", "Implementation roadmap"],
+      "We design the optimized operational system—process paths, scheduling buffers, coordination cadences, database integrations, and custom internal tools—specifically structured to solve your bottlenecks.",
+    outputs: ["To-Be System Specification", "Database Schema & Bridge Designs", "Custom Tooling Prototypes"],
   },
   {
     number: "04",
     title: "Implement",
-    tagline: "Build with precision",
+    tagline: "Construct the systems with precision",
     description:
-      "We work alongside your team to build the systems, templates, and tools defined in the design phase — with practical attention to adoption and change management.",
-    outputs: ["Live operational systems", "Configured tools and templates", "Training materials"],
+      "We build the database bridges, configure the synchronization flows, construct the custom operational portals, and set up the planning boards. We code and test every integration to ensure absolute stability.",
+    outputs: ["Configured Database Bridges", "Live Operational Portals & Tools", "Automated Synchronization Scripts"],
   },
   {
     number: "05",
-    title: "Embed",
-    tagline: "Make it stick",
+    title: "Stabilize",
+    tagline: "Embed the process deep in daily habits",
     description:
-      "New systems only deliver value if they are actually used. We focus significant effort on embedding new processes into daily operations, addressing resistance and reinforcing consistency.",
-    outputs: ["Team onboarding", "Usage monitoring", "Process governance"],
+      "A modern systems design is worthless if your teams bypass it. We spend significant hands-on energy embedding the new workflows into daily routines, onboarding operators, and refining tools to eradicate friction.",
+    outputs: ["Frontline Operator Onboarding", "Usage & Process Compliance Logs", "Refined Habit Checklists"],
   },
   {
     number: "06",
-    title: "Improve",
-    tagline: "Refine based on operational reality",
+    title: "Scale",
+    tagline: "Expand capacities and protect margins",
     description:
-      "Once embedded, we create structured feedback loops that allow the system to improve continuously — informed by operational data, frontline input, and performance monitoring.",
-    outputs: ["Review cadences", "Performance dashboards", "Improvement backlog"],
+      "Once operations are stable and predictable, we set up real-time monitoring and reporting loops. We establish long-term feedback rhythms to support volume expansion without adding administrative overhead.",
+    outputs: ["Real-time Visibility Dashboards", "Operational Review Cadences", "Continuous Optimization Backlog"],
   },
 ];
 
@@ -60,7 +60,7 @@ export default function Methodology() {
   const inView = useInView(headingRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="methodology" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50">
+    <section id="methodology" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50 border-t dark:border-white/[0.04] border-black/[0.04]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div ref={headingRef} className="max-w-2xl mb-16 md:mb-20">
@@ -72,7 +72,7 @@ export default function Methodology() {
           >
             <div className="h-px w-8 dark:bg-steel-500/60 bg-steel-500/40" />
             <span className="text-2xs font-semibold tracking-widest-2 uppercase dark:text-steel-400 text-steel-600">
-              How We Work
+              Our Methodology
             </span>
           </motion.div>
           <motion.h2
@@ -81,7 +81,7 @@ export default function Methodology() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-5xl font-semibold dark:text-ink-100 text-ink-900 leading-tight tracking-tight text-balance"
           >
-            A rigorous, repeatable methodology.
+            A rigorous, repeatable transition.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -89,8 +89,8 @@ export default function Methodology() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-4 text-lg dark:text-ink-300 text-ink-400 leading-relaxed"
           >
-            Our engagement process is structured, transparent, and designed to produce durable
-            operational improvements — not presentations.
+            We do not hand over conceptual slide decks. We execute a disciplined, phased roadmap
+            engineered to transform chaotic processes into structured systems.
           </motion.p>
         </div>
 
@@ -113,7 +113,7 @@ export default function Methodology() {
                 <button
                   key={i}
                   onClick={() => setActivePhase(i)}
-                  className="flex flex-col items-center gap-3 group"
+                  className="flex flex-col items-center gap-3 group cursor-pointer"
                 >
                   <div
                     className={`w-10 h-10 rounded-full border flex items-center justify-center text-xs font-semibold transition-all duration-300 z-10 ${
@@ -154,7 +154,7 @@ export default function Methodology() {
                   {phases[activePhase].number}
                 </span>
                 <div>
-                  <h3 className="text-2xl font-semibold dark:text-ink-100 text-ink-900">
+                  <h3 className="text-xl font-semibold dark:text-ink-100 text-ink-900">
                     {phases[activePhase].title}
                   </h3>
                   <p className="text-sm dark:text-steel-400 text-steel-600 mt-0.5">
@@ -162,13 +162,13 @@ export default function Methodology() {
                   </p>
                 </div>
               </div>
-              <p className="text-base dark:text-ink-300 text-ink-400 leading-relaxed">
+              <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed">
                 {phases[activePhase].description}
               </p>
             </div>
             <div>
               <div className="text-xs font-semibold uppercase tracking-widest dark:text-ink-400 text-ink-400 mb-4">
-                Phase Outputs
+                Phase Deliverables
               </div>
               <div className="flex flex-col gap-2.5">
                 {phases[activePhase].outputs.map((output, i) => (
@@ -177,7 +177,7 @@ export default function Methodology() {
                     className="flex items-center gap-3 p-3 rounded-lg dark:bg-surface-800/60 bg-surface-50/80 border dark:border-white/[0.04] border-black/[0.04]"
                   >
                     <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-steel-500/60" />
-                    <span className="text-sm dark:text-ink-200 text-ink-700">{output}</span>
+                    <span className="text-xs dark:text-ink-200 text-ink-700">{output}</span>
                   </div>
                 ))}
               </div>
@@ -204,12 +204,23 @@ export default function Methodology() {
                   <h3 className="text-base font-semibold dark:text-ink-100 text-ink-900 mb-1">
                     {phase.title}
                   </h3>
-                  <p className="text-sm dark:text-steel-400/80 text-steel-600/70 mb-3">
+                  <p className="text-xs dark:text-steel-400/80 text-steel-600/70 mb-3">
                     {phase.tagline}
                   </p>
-                  <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed">
+                  <p className="text-xs dark:text-ink-300 text-ink-400 leading-relaxed mb-4">
                     {phase.description}
                   </p>
+                  <div className="text-2xs font-semibold uppercase tracking-wider dark:text-ink-400 text-ink-400 mb-2">
+                    Phase Deliverables:
+                  </div>
+                  <ul className="flex flex-col gap-1.5">
+                    {phase.outputs.map((out, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-2xs dark:text-ink-300 text-ink-500">
+                        <div className="w-1 h-1 rounded-full bg-steel-500" />
+                        {out}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>

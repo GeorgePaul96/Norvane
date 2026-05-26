@@ -5,29 +5,29 @@ import { motion, useInView } from "framer-motion";
 
 const beliefs = [
   {
-    statement: "Operational complexity is usually a coordination problem.",
+    statement: "Process before software.",
     elaboration:
-      "Most organisations have capable people with adequate resources. What they lack is a shared operational picture — a clear view of what everyone else is doing and why it matters. Complexity is often manufactured by poor coordination, not by the work itself.",
+      "A well-designed process running on a spreadsheet will always outperform a broken process running on an expensive enterprise system. sequence matters: we define, map, and structure the work first. Technology follows to cement and accelerate those rules, not to invent them.",
   },
   {
-    statement: "Process before automation.",
+    statement: "Systems people actually use.",
     elaboration:
-      "Automating a broken process produces broken results faster. The sequence matters: understand the work, design the process, then — and only then — consider what technology can do to support it. This is not a conservative position. It is a practical one.",
+      "The most sophisticated planning system is worthless if your operators bypass it to coordinate via informal group chats or notebook scribbles. We design systems around the daily habits, friction, and environmental realities of the frontline workers who maintain them.",
   },
   {
-    statement: "Visibility before prediction.",
+    statement: "Visibility before automation.",
     elaboration:
-      "Organisations that cannot see their current operational state should not be building predictive models. The greatest operational leverage comes from simply knowing what is happening right now — in accurate, timely, legible form.",
+      "Automating a blind, chaotic process simply generates coordination failures at a higher velocity. Organizations must first establish transparent operational visibility—knowing exactly what is happening in real-time—before delegating decisions to automated routines.",
   },
   {
-    statement: "Structure reduces cognitive load.",
+    statement: "Coordination over complexity.",
     elaboration:
-      "When processes are clear and roles are understood, people focus their energy on the work rather than on figuring out what to do next. Operational structure is not bureaucracy. It is the infrastructure that allows good judgment to be applied consistently.",
+      "Most operational stress stems from coordination failures, not task difficulty. When teams lack a shared, high-fidelity operational picture, they drift into reactive troubleshooting. True efficiency is the quiet result of clean, predictable handoffs.",
   },
   {
-    statement: "Intelligence is only useful if it changes decisions.",
+    statement: "Intelligence that creates operational agency.",
     elaboration:
-      "Data and reporting that no one acts on is not operational intelligence — it is operational noise. We measure success by the quality of decisions made, not the quantity of information produced.",
+      "Data reporting that no one acts upon is not operational intelligence—it is noise. Dashboards are only valuable if they supply execution teams with the agency and information required to make a corrective decision in the moment, not 30 days later.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Philosophy() {
   const inView = useInView(headingRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" className="py-28 md:py-36 dark:bg-surface-850 bg-white">
+    <section id="philosophy" className="py-28 md:py-36 dark:bg-surface-850 bg-white border-t dark:border-white/[0.04] border-black/[0.04]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div ref={headingRef} className="grid md:grid-cols-2 gap-12 mb-20 md:mb-24">
@@ -49,7 +49,7 @@ export default function Philosophy() {
             >
               <div className="h-px w-8 dark:bg-steel-500/60 bg-steel-500/40" />
               <span className="text-2xs font-semibold tracking-widest-2 uppercase dark:text-steel-400 text-steel-600">
-                What We Believe
+                Core Philosophy
               </span>
             </motion.div>
             <motion.h2
@@ -58,7 +58,7 @@ export default function Philosophy() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-4xl md:text-5xl font-semibold dark:text-ink-100 text-ink-900 leading-tight tracking-tight text-balance"
             >
-              A different kind of operational consultancy.
+              Quiet operational discipline beats technological hype.
             </motion.h2>
           </div>
           <motion.div
@@ -68,13 +68,12 @@ export default function Philosophy() {
             className="flex flex-col justify-end"
           >
             <p className="text-lg dark:text-ink-300 text-ink-400 leading-relaxed mb-4">
-              We are not generalist management consultants with an operations practice. We are
-              operational specialists with deep experience in the industries where things are built,
-              moved, grown, and delivered.
+              We are not technology salespeople marketing the latest trendy integration. We are
+              systems-first operators who understand how real businesses move, build, and deliver.
             </p>
             <p className="text-base dark:text-ink-400 text-ink-400 leading-relaxed">
-              The beliefs below are not a marketing position. They represent the perspective we bring
-              to every engagement — informed by direct experience of what works and what does not.
+              These principles are not marketing claims. They represent the rigorous operational framework
+              we apply to design structural resilience into every client's workflow.
             </p>
           </motion.div>
         </div>
@@ -122,33 +121,33 @@ export default function Philosophy() {
         >
           {[
             {
-              label: "Not",
-              items: ["Software vendors", "Generic management consultants", "Change management firms", "Technology integrators"],
+              label: "Norvane is NOT",
+              items: ["A generic AI wrapper agency", "A generic marketing consultancy", "A simple no-code automation shop", "An enterprise dashboard factory"],
             },
             {
-              label: "But",
-              items: ["Operational systems designers", "Process architecture specialists", "Coordination problem solvers", "Decision infrastructure builders"],
+              label: "Norvane IS",
+              items: ["Operational systems designers", "Workflow planning specialists", "Coordination architecture partners", "Process intelligence experts"],
             },
             {
-              label: "For",
-              items: ["COOs and operations directors", "Supply chain and logistics leaders", "Agricultural operators", "Operationally complex founders"],
+              label: "Designed FOR",
+              items: ["Operations Directors & COOs", "Logistics & agricultural firms", "Supply chain & manufacturing leads", "Operationally messy, scaling companies"],
             },
           ].map((col, i) => (
             <div
               key={i}
               className="p-7 rounded-xl dark:bg-surface-900/60 bg-surface-50/80 border dark:border-white/[0.05] border-black/[0.05]"
             >
-              <div className={`text-sm font-semibold mb-4 ${
-                col.label === "Not" ? "dark:text-red-400/70 text-red-600/70" :
-                col.label === "But" ? "dark:text-steel-400 text-steel-600" :
-                "dark:text-green-400/70 text-green-600/70"
+              <div className={`text-2xs font-bold uppercase tracking-widest mb-4 ${
+                col.label.includes("NOT") ? "dark:text-red-400/80 text-red-600/80" :
+                col.label.includes("IS") ? "dark:text-steel-400 text-steel-600" :
+                "dark:text-ink-300 text-ink-600"
               }`}>
                 {col.label}
               </div>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2.5">
                 {col.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2.5 text-sm dark:text-ink-300 text-ink-400">
-                    <div className="w-1 h-1 rounded-full dark:bg-ink-400 bg-ink-400 mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full dark:bg-steel-500/40 bg-steel-500/30 mt-2 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
