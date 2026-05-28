@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { ArrowRight, RotateCw, Settings, Truck, Building2, Shuffle } from "lucide-react";
+import { ArrowRight, RotateCw, AlertTriangle, Truck, Building2, Shuffle } from "lucide-react";
 
 const scenarios = [
   {
@@ -19,8 +19,8 @@ const scenarios = [
     },
     after: {
       solution: "We designed a low-friction operational visibility bridge that extracted yield-rates directly from harvester monitors and connected them with real-time GPS transport data, mapping automated dispatch buffers.",
-      metric: "0% bin-waiting idle times",
-      consequence: "Achieved a 98.4% terminal delivery compliance rate and saved dispatchers from 80+ daily coordination phone calls.",
+      metric: "Near-zero bin-waiting idle time",
+      consequence: "Achieved near-complete terminal delivery compliance and substantially reduced daily dispatcher coordination calls.",
     },
   },
   {
@@ -33,12 +33,12 @@ const scenarios = [
     before: {
       chaos: "The master planning sheet crashed or locked out planners daily. Lead-times were calculated on manual 'guesses', leading to over-allocating machinery and key-worker shortages.",
       metric: "18 days average lead-time variance",
-      consequence: "Over $18,000 paid weekly in emergency courier fees and worker overtime to expedite late customer orders.",
+      consequence: "Substantial weekly costs in emergency courier fees and worker overtime to expedite late customer orders.",
     },
     after: {
       solution: "We built a centralized database mapping tool centers and raw capacities, utilizing automated constraint checks. Schedulers plan visually on a shared drag-and-drop planning board.",
       metric: "Zero capacity over-allocations",
-      consequence: "Reduced lead-time variance to less than 1.5 days, reduced expedite costs to $0, and saved 14 planning hours weekly.",
+      consequence: "Reduced lead-time variance from weeks to days, eliminated emergency expediting costs, and recovered significant planning capacity weekly.",
     },
   },
   {
@@ -55,8 +55,8 @@ const scenarios = [
     },
     after: {
       solution: "We deployed a light, cloud-connected routing dashboard onto durable tablet screens inside delivery cabs. We linked route telemetry to automated dispatcher alerts.",
-      metric: "94% reduction in food spoilage",
-      consequence: "Reduced average depot turnaround times by 35 minutes, eliminating manual driver check-in phone calls entirely.",
+      metric: "Major reduction in cargo spoilage",
+      consequence: "Reduced average depot turnaround times significantly and substantially reduced manual driver coordination calls.",
     },
   },
 ];
@@ -70,7 +70,7 @@ export default function CaseStudies() {
   const inView = useInView(headingRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="cases" className="py-28 md:py-36 dark:bg-surface-850 bg-white border-t dark:border-white/[0.04] border-black/[0.04]">
+    <section id="cases" className="py-20 md:py-28 dark:bg-surface-850 bg-white border-t dark:border-white/[0.04] border-black/[0.04]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         {/* Header */}
         <div ref={headingRef} className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20">
@@ -92,7 +92,7 @@ export default function CaseStudies() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-4xl md:text-5xl font-semibold dark:text-ink-100 text-ink-900 leading-tight tracking-tight text-balance"
             >
-              Operational transformations in practice.
+              Operational scenarios.
             </motion.h2>
           </div>
           <motion.p
@@ -101,8 +101,8 @@ export default function CaseStudies() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-sm text-sm dark:text-ink-300 text-ink-400 leading-relaxed md:text-right"
           >
-            These are not fabricated success stories. They represent realistic, technically modeled 
-            transformations showing how process mapping and system redesign eliminate operational chaos.
+            Illustrative scenarios drawn from real coordination patterns across agriculture,
+            manufacturing, and logistics operations.
           </motion.p>
         </div>
 
@@ -169,7 +169,7 @@ export default function CaseStudies() {
               <div className="p-6 rounded-xl dark:bg-surface-850/40 bg-white/60 border dark:border-red-500/[0.07] border-red-500/[0.07] flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-4 text-red-500 dark:text-red-400">
-                    <Settings size={14} className="animate-spin" style={{ animationDuration: "10s" }} />
+                    <AlertTriangle size={14} />
                     <span className="text-2xs font-bold uppercase tracking-wider">
                       The Coordination Breakdown
                     </span>
@@ -223,8 +223,8 @@ export default function CaseStudies() {
             {/* Bottom CTA block */}
             <div className="mt-10 p-5 rounded-lg dark:bg-surface-850 bg-white border dark:border-white/5 border-black/5 flex items-center justify-between flex-wrap gap-4">
               <div className="text-xs dark:text-ink-300 text-ink-400 leading-relaxed max-w-xl">
-                Every business breaks differently. Our fixed-scope Operational Diagnostic maps your 
-                specific processes to identify exact coordinate exposure limits.
+                Every operation breaks in its own way. Our fixed-scope Diagnostic maps your specific
+                processes to locate exactly where coordination is failing — and what it's costing.
               </div>
               <a
                 href="#diagnostic"
@@ -234,7 +234,7 @@ export default function CaseStudies() {
                 }}
                 className="group inline-flex items-center gap-1.5 text-xs font-semibold dark:text-steel-400 text-steel-600 hover:underline underline-offset-4 transition-all duration-200 cursor-pointer"
               >
-                Learn How We Modernize Operations
+                See How the Diagnostic Works
                 <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform duration-200" />
               </a>
             </div>

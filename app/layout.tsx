@@ -11,16 +11,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Norvane — Operational Intelligence for Real-World Complexity",
+  title: "Norvane — Operations Consulting for Agriculture & Logistics",
   description:
-    "Norvane helps operationally complex businesses improve coordination, visibility, planning, and decision-making through structured systems and intelligent process design.",
+    "Norvane diagnoses broken operational processes and builds the coordination systems that replace them. Fixed-scope diagnostics and custom operational visibility dashboards for agriculture and logistics businesses.",
   keywords: [
-    "operational intelligence",
-    "business transformation",
-    "process consulting",
+    "operations consulting",
+    "operational diagnostics",
+    "coordination systems",
     "operational visibility",
-    "systems thinking",
-    "operations management",
+    "agriculture operations",
+    "logistics operations",
+    "process mapping",
   ],
 };
 

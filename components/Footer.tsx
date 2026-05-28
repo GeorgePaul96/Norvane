@@ -4,22 +4,17 @@ import { motion } from "framer-motion";
 
 const footerLinks = {
   Services: [
-    "Operational Diagnostics",
-    "Process Mapping",
-    "Planning Systems",
-    "Operational Visibility",
-    "Workflow Modernisation",
-    "Decision Support",
+    "Operations Diagnostic",
+    "Process Blueprint",
+    "Operational Visibility Dashboard",
   ],
   Approach: [
     "Methodology",
-    "How We Work",
-    "Industries",
     "Case Studies",
+    "Industries Served",
   ],
   Company: [
     "About Norvane",
-    "Insights",
     "Contact",
   ],
 };
@@ -48,8 +43,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed max-w-xs mb-6">
-              Operational intelligence for real-world complexity. Helping businesses improve
-              coordination, visibility, and decision-making.
+              Diagnostics-led operations consultancy. We map broken processes and build the
+              coordination systems that replace them — for agriculture and logistics businesses.
             </p>
             <a
               href="mailto:hello@norvane.com"

@@ -83,3 +83,4 @@ __pycache__/
 # Supabase / Firebase (in case of future integration)
 .supabase/
 .firebase/
+.gstack/

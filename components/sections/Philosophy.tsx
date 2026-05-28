@@ -7,7 +7,7 @@ const beliefs = [
   {
     statement: "Process before software.",
     elaboration:
-      "A well-designed process running on a spreadsheet will always outperform a broken process running on an expensive enterprise system. sequence matters: we define, map, and structure the work first. Technology follows to cement and accelerate those rules, not to invent them.",
+      "A well-designed process running on a spreadsheet will always outperform a broken process running on an expensive enterprise system. Sequence matters: define, map, and structure the work first. Technology follows to cement and accelerate those rules, not to invent them.",
   },
   {
     statement: "Systems people actually use.",
@@ -22,7 +22,7 @@ const beliefs = [
   {
     statement: "Coordination over complexity.",
     elaboration:
-      "Most operational stress stems from coordination failures, not task difficulty. When teams lack a shared, high-fidelity operational picture, they drift into reactive troubleshooting. True efficiency is the quiet result of clean, predictable handoffs.",
+      "When teams lack a shared operational picture, they drift into reactive troubleshooting. True efficiency is the quiet result of clean, predictable handoffs — not harder work or more sophisticated tools.",
   },
   {
     statement: "Intelligence that creates operational agency.",
@@ -36,10 +36,10 @@ export default function Philosophy() {
   const inView = useInView(headingRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="philosophy" className="py-28 md:py-36 dark:bg-surface-850 bg-white border-t dark:border-white/[0.04] border-black/[0.04]">
+    <section id="philosophy" className="py-20 md:py-28 dark:bg-surface-850 bg-white border-t dark:border-white/[0.04] border-black/[0.04]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <div ref={headingRef} className="grid md:grid-cols-2 gap-12 mb-20 md:mb-24">
+        <div ref={headingRef} className="grid md:grid-cols-2 gap-12 mb-14 md:mb-16">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -117,20 +117,20 @@ export default function Philosophy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mt-20 grid md:grid-cols-3 gap-6"
+          className="mt-12 grid md:grid-cols-3 gap-6"
         >
           {[
             {
-              label: "Norvane is NOT",
-              items: ["A generic AI wrapper agency", "A generic marketing consultancy", "A simple no-code automation shop", "An enterprise dashboard factory"],
+              label: "What We Are Not",
+              items: ["A generic AI wrapper agency", "A generic marketing consultancy", "A no-code automation shop", "An enterprise dashboard factory"],
             },
             {
-              label: "Norvane IS",
-              items: ["Operational systems designers", "Workflow planning specialists", "Coordination architecture partners", "Process intelligence experts"],
+              label: "What We Are",
+              items: ["Operational systems designers", "Implementation-focused, not advisory", "Coordination architecture partners", "Embedded for outcomes, not hours"],
             },
             {
-              label: "Designed FOR",
-              items: ["Operations Directors & COOs", "Logistics & agricultural firms", "Supply chain & manufacturing leads", "Operationally messy, scaling companies"],
+              label: "Who We Serve",
+              items: ["Operations Directors & COOs", "Logistics & agricultural firms", "Supply chain & manufacturing leads", "Operationally complex, scaling companies"],
             },
           ].map((col, i) => (
             <div

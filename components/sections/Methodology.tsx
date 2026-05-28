@@ -33,7 +33,7 @@ const phases = [
     title: "Implement",
     tagline: "Construct the systems with precision",
     description:
-      "We build the database bridges, configure the synchronization flows, construct the custom operational portals, and set up the planning boards. We code and test every integration to ensure absolute stability.",
+      "We build the database bridges, configure the synchronization flows, construct the custom operational portals, and set up the planning boards. Every integration is tested against real operational conditions before handover.",
     outputs: ["Configured Database Bridges", "Live Operational Portals & Tools", "Automated Synchronization Scripts"],
   },
   {
@@ -60,7 +60,7 @@ export default function Methodology() {
   const inView = useInView(headingRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="methodology" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50 border-t dark:border-white/[0.04] border-black/[0.04]">
+    <section id="methodology" className="py-20 md:py-28 dark:bg-surface-900 bg-surface-50 border-t dark:border-white/[0.04] border-black/[0.04]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div ref={headingRef} className="max-w-2xl mb-16 md:mb-20">
@@ -81,7 +81,7 @@ export default function Methodology() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-5xl font-semibold dark:text-ink-100 text-ink-900 leading-tight tracking-tight text-balance"
           >
-            A rigorous, repeatable transition.
+            Six phases. No shortcuts.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -89,8 +89,8 @@ export default function Methodology() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-4 text-lg dark:text-ink-300 text-ink-400 leading-relaxed"
           >
-            We do not hand over conceptual slide decks. We execute a disciplined, phased roadmap
-            engineered to transform chaotic processes into structured systems.
+            No slide decks, no open-ended statements of work. A disciplined, phased roadmap that
+            transforms chaotic operations into structured, predictable systems.
           </motion.p>
         </div>
 
@@ -106,7 +106,7 @@ export default function Methodology() {
             <div className="absolute top-5 left-0 right-0 h-px dark:bg-white/[0.06] bg-black/[0.06]" />
             <div
               className="absolute top-5 left-0 h-px bg-steel-500/60 transition-all duration-500 ease-out"
-              style={{ width: `${((activePhase + 1) / phases.length) * 100}%` }}
+              style={{ width: `${(activePhase / (phases.length - 1)) * 100}%` }}
             />
             <div className="grid grid-cols-6 relative">
               {phases.map((phase, i) => (

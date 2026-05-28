@@ -19,7 +19,7 @@ const diagnosticSteps = [
     duration: "Weeks 3–4",
     icon: ShieldAlert,
     description:
-      "We catalog every operational handover, check for manual copy-paste reconciliation loops, run volume stress tests, and identify key-person dependencies that threaten process stability.",
+      "We catalog every operational handover, check for manual copy-paste reconciliation loops, and identify key-person dependencies that threaten process stability.",
   },
   {
     step: "03",
@@ -59,7 +59,7 @@ export default function DiagnosticProgram() {
   const inView = useInView(containerRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="diagnostic" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50 border-t dark:border-white/[0.04] border-black/[0.04]">
+    <section id="diagnostic" className="py-20 md:py-28 dark:bg-surface-900 bg-surface-50 border-t dark:border-white/[0.04] border-black/[0.04]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         {/* Header */}
         <div ref={containerRef} className="max-w-3xl mb-20">
@@ -178,14 +178,18 @@ export default function DiagnosticProgram() {
             <div className="flex items-center gap-3">
               <Calendar size={18} className="dark:text-steel-500 text-steel-400" />
               <div className="text-xs dark:text-ink-300 text-ink-500">
-                <strong>Schedule:</strong> Fixed 4–6 week timeline. Requires 4 hours of management time total.
+                <strong>Fixed fee, fixed scope.</strong> 4–6 week timeline. No open-ended billing — the engagement cost is agreed upfront based on operation size.
               </div>
             </div>
             <a
-              href="mailto:hello@norvane.com"
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="group inline-flex items-center justify-center gap-2 h-11 px-6 rounded-md text-xs font-semibold dark:bg-ink-100 bg-ink-900 dark:text-ink-900 text-ink-100 hover:dark:bg-white hover:bg-ink-800 transition-all duration-200 cursor-pointer whitespace-nowrap"
             >
-              Initiate Diagnostic Conversation
+              Start the Conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />

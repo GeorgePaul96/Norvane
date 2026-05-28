@@ -7,10 +7,10 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Capabilities", href: "#services" },
+  { label: "Services", href: "#services" },
+  { label: "Case Studies", href: "#cases" },
   { label: "Methodology", href: "#methodology" },
-  { label: "System Redesigns", href: "#cases" },
+  { label: "Diagnostic", href: "#diagnostic" },
 ];
 
 export default function Navigation() {

@@ -8,8 +8,8 @@ const vulnerabilities = [
   {
     icon: Database,
     title: "Spreadsheet Dependency",
-    metric: "74% of operators",
-    label: "rely on local files for planning",
+    metric: "Most operations teams",
+    label: "rely on local files for critical planning",
     description:
       "Critical scheduling, inventory state, and coordination plans live in isolated spreadsheets. Version control is impossible, calculations break silently, and critical context is lost in email threads.",
   },
@@ -60,7 +60,7 @@ export default function Problem() {
   const inView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="problem" className="py-28 md:py-36 dark:bg-surface-900 bg-surface-50 relative overflow-hidden border-t dark:border-white/[0.04] border-black/[0.04]">
+    <section id="problem" className="py-20 md:py-28 dark:bg-surface-900 bg-surface-50 relative overflow-hidden border-t dark:border-white/[0.04] border-black/[0.04]">
       {/* Background dot grid details */}
       <div
         className="absolute inset-0 dark:bg-dot-grid bg-dot-grid-light bg-40 pointer-events-none"
@@ -116,7 +116,7 @@ export default function Problem() {
                 delay: i * 0.08,
                 ease: [0.21, 0.47, 0.32, 0.98],
               }}
-              className="group p-8 rounded-xl border dark:border-white/[0.05] border-black/[0.05] dark:bg-surface-850/40 bg-white/60 hover:dark:bg-surface-850/80 hover:bg-white/90 hover:dark:border-white/[0.1] hover:border-black/[0.1] transition-all duration-300 flex flex-col justify-between"
+              className="group p-8 rounded-xl border dark:border-white/[0.05] border-black/[0.05] dark:bg-surface-850/40 bg-white/60 hover:dark:bg-surface-850/80 hover:bg-white/90 hover:dark:border-white/[0.1] hover:border-black/[0.1] transition-all duration-300"
             >
               <div>
                 <div className="flex items-center gap-3 mb-6">
@@ -142,11 +142,6 @@ export default function Problem() {
                 </p>
               </div>
 
-              {/* Accent Indicator */}
-              <div className="mt-8 pt-4 border-t dark:border-white/[0.03] border-black/[0.03] flex items-center justify-between">
-                <span className="text-2xs dark:text-ink-400 text-ink-500 font-medium">Risk exposure: High</span>
-                <span className="w-1.5 h-1.5 rounded-full dark:bg-red-500/60 bg-red-500/50" />
-              </div>
             </motion.div>
           ))}
         </div>
@@ -159,24 +154,19 @@ export default function Problem() {
           transition={{ duration: 0.8 }}
           className="mt-16 p-8 rounded-xl border dark:border-white/[0.04] border-black/[0.04] dark:bg-surface-850/20 bg-white/30 flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          <div className="flex items-start gap-4">
-            <span className="text-xs font-bold dark:text-steel-400 text-steel-600 uppercase tracking-widest mt-1">
-              Context
-            </span>
-            <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed max-w-2xl">
-              Software companies sell features. We design operating discipline. If your processes aren't
-              modeled around coordination bottlenecks, no enterprise system will resolve the chaos.
-            </p>
-          </div>
+          <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed max-w-2xl">
+            If this describes your operation, a structured diagnostic is the right starting point —
+            not more software.
+          </p>
           <a
-            href="#diagnostic"
+            href="#diagnostic-tool"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("diagnostic")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("diagnostic-tool")?.scrollIntoView({ behavior: "smooth" });
             }}
             className="text-xs font-semibold dark:text-steel-400 text-steel-600 dark:border-b border-b dark:border-steel-400/30 border-steel-600/30 pb-0.5 hover:dark:border-steel-400 hover:border-steel-600 transition-all duration-200 whitespace-nowrap"
           >
-            Identify your risk profile ↓
+            Assess your risk ↓
           </a>
         </motion.div>
       </div>
