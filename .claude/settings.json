@@ -1,10 +1,11 @@
 {
   "permissions": {
+    "allow": [
+      "Read(//c/Users/georg/AppData/Local/Temp/**)",
+      "Bash(python tools/generate_playbook.py)"
+    ],
     "additionalDirectories": [
       "c:\\Users\\georg\\.claude\\projects\\c--Users-georg-OneDrive-Desktop-Projects-Norvane\\memory"
-    ],
-    "allow": [
-      "Read(//c/Users/georg/AppData/Local/Temp/**)"
     ]
   }
 }
