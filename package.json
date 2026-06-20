@@ -9,24 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.30",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.8",
+    "lucide-react": "^0.427.0",
+    "next": "^14.2.35",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "framer-motion": "^11.3.8",
-    "next-themes": "^0.3.0",
-    "lucide-react": "^0.427.0",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.5.2",
-    "class-variance-authority": "^0.7.0",
-    "@radix-ui/react-slot": "^1.1.0"
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
     "postcss": "^8",
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5"
   }
 }

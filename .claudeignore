@@ -1,0 +1,65 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# .claudeignore — Norvane
+# Tells Claude Code which files and directories to never read or index.
+# Syntax mirrors .gitignore. Paths are relative to the project root.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Next.js build output ─────────────────────────────────────────────────────
+# 120 MB of webpack cache, compiled chunks, and vendor bundles.
+# None of this is source code. Reading any of it wastes 5,000–50,000 tokens.
+.next/
+out/
+
+# ── Node dependencies ─────────────────────────────────────────────────────────
+# ~315 MB of third-party packages. Claude should rely on package.json alone
+# to understand what libraries are in use. Never enumerate this directory.
+node_modules/
+
+# ── TypeScript incremental build cache ───────────────────────────────────────
+# 81.8 KB of machine-generated compiler state. ~20,000 tokens if read.
+# Provides zero information about application logic.
+*.tsbuildinfo
+
+# ── Package lockfile ─────────────────────────────────────────────────────────
+# 58.8 KB of resolved dependency hashes. Use package.json for dependency info.
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ── gstack session data ───────────────────────────────────────────────────────
+# Browser automation logs, audit JSONL, port files, and internal tokens.
+# 22+ KB of raw session data with no architectural value.
+.gstack/
+
+# ── Business documents (not web project source) ───────────────────────────────
+# The Word document is a standalone business artifact, not application code.
+# The Python script generates business deliverables, not web components.
+Norvane_Operator_Playbook.docx
+docs/*.docx
+docs/*.pdf
+
+# ── Non-project tooling ───────────────────────────────────────────────────────
+# generate_playbook.py is a standalone business tool (~72 KB), irrelevant
+# when working on the Next.js web project.
+tools/generate_playbook.py
+
+# ── Git internals ─────────────────────────────────────────────────────────────
+.git/
+
+# ── Editor metadata ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── OS artifacts ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── Environment secrets ───────────────────────────────────────────────────────
+.env
+.env.local
+.env*.local

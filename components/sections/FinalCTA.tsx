@@ -12,6 +12,7 @@ interface FormData {
   role: string;
   challenge: string;
   message: string;
+  website: string; // honeypot — never shown to humans
 }
 
 const roleOptions = [
@@ -57,6 +58,7 @@ export default function FinalCTA() {
     role: "",
     challenge: "",
     message: "",
+    website: "", // honeypot
   });
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errors, setErrors] = useState<Partial<FormData>>({});
@@ -88,7 +90,7 @@ export default function FinalCTA() {
 
   const resetForm = () => {
     setStatus("idle");
-    setFormData({ name: "", company: "", role: "", challenge: "", message: "" });
+    setFormData({ name: "", company: "", role: "", challenge: "", message: "", website: "" });
     setErrors({});
   };
 
@@ -226,6 +228,20 @@ export default function FinalCTA() {
                     noValidate
                     className="flex flex-col gap-5"
                   >
+                    {/* Honeypot — hidden from humans, bots fill it */}
+                    <div aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none">
+                      <label htmlFor="website">Website</label>
+                      <input
+                        id="website"
+                        type="text"
+                        name="website"
+                        value={formData.website}
+                        onChange={(e) => setFormData((p) => ({ ...p, website: e.target.value }))}
+                        tabIndex={-1}
+                        autoComplete="off"
+                      />
+                    </div>
+
                     {/* Name + Company */}
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
