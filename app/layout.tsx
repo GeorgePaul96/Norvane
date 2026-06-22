@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Norvane — Operations Consulting for Agriculture & Logistics",
+  title: "Norvane: Operations Consulting for Agriculture & Logistics",
   description:
     "Norvane diagnoses broken operational processes and builds the coordination systems that replace them. Fixed-scope diagnostics and custom operational visibility dashboards for agriculture and logistics businesses.",
   keywords: [

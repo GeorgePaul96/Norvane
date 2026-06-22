@@ -10,10 +10,10 @@ const services = [
     phase: "Entry point",
     icon: Search,
     title: "Operations Diagnostic",
-    tagline: "See exactly where operations are breaking — before we fix anything",
-    problem: "Operations teams manage from lagging signals — weekly reports, monthly summaries, and downstream consequences like missed deliveries and cost overruns. By the time a problem is visible, it has already compounded. The real bottlenecks are buried in undocumented handoffs, verbal processes, and isolated spreadsheets.",
-    whyExists: "Operational complexity grows faster than operational documentation. Departments solve local problems locally — custom sheets, verbal patches, informal workarounds — each one creating invisible fragmentation at the system level.",
-    approach: "We conduct structured field observations and process audits over 4–6 weeks. We trace every handoff, document every data-entry step, and map the actual operating system — not the idealized one on paper. We interview frontline operators, shadow schedulers, and audit every active spreadsheet and workaround.",
+    tagline: "See exactly where operations are breaking, before we fix anything",
+    problem: "Operations teams manage from lagging signals: weekly reports, monthly summaries, and downstream consequences like missed deliveries and cost overruns. By the time a problem is visible, it has already compounded. The real bottlenecks are buried in undocumented handoffs, verbal processes, and isolated spreadsheets.",
+    whyExists: "Operational complexity grows faster than operational documentation. Departments solve local problems locally with custom sheets, verbal patches, and informal workarounds, each one creating invisible fragmentation at the system level.",
+    approach: "We conduct structured field observations and process audits over 4 to 6 weeks. We trace every handoff, document every data-entry step, and map the actual operating system, not the idealized one on paper. We interview frontline operators, shadow schedulers, and audit every active spreadsheet and workaround.",
     afterState: "A complete, high-fidelity picture of how your operations actually run. Process gaps, coordination risks, and key-person dependencies are formally documented, prioritized by impact, and presented as a clear modernization roadmap.",
   },
   {
@@ -21,22 +21,22 @@ const services = [
     phase: "Design phase",
     icon: Map,
     title: "Process Blueprint",
-    tagline: "A designed operating system — specific to your constraints, ready to build from",
-    problem: "Most process improvement fails because the solution doesn't match the actual constraint. Frameworks designed without field observation create coordination systems that staff bypass from day one — returning to spreadsheets, WhatsApp, and personal notebooks within weeks.",
-    whyExists: "Generic process templates and consulting slide decks don't account for the environmental reality of your specific operation — your shift rhythms, equipment constraints, team communication patterns, and seasonal pressures.",
+    tagline: "A designed operating system, specific to your constraints, ready to build from",
+    problem: "Most process improvement fails because the solution doesn't match the actual constraint. Frameworks designed without field observation create coordination systems that staff bypass from day one, returning to spreadsheets, WhatsApp, and personal notebooks within weeks.",
+    whyExists: "Generic process templates and consulting slide decks don't account for the environmental reality of your specific operation: your shift rhythms, equipment constraints, team communication patterns, and seasonal pressures.",
     approach: "Using the Diagnostic findings as the foundation, we design a custom coordination framework, scheduling architecture, and workflow specification. Every design decision is traceable to a specific observed bottleneck. We produce visual process maps, scheduling logic, data-flow architecture, and a sequenced implementation plan.",
-    afterState: "A complete operational specification. Process maps, scheduling design, handoff protocols, and a prioritized implementation roadmap — grounded in how your operation actually works, not how a textbook says it should.",
+    afterState: "A complete operational specification. Process maps, scheduling design, handoff protocols, and a prioritized implementation roadmap, grounded in how your operation actually works, not how a textbook says it should.",
   },
   {
     id: "dashboard",
     phase: "Implementation",
     icon: BarChart2,
     title: "Operational Visibility Dashboard",
-    tagline: "Real-time coordination visibility — built for decisions, not reports",
+    tagline: "Real-time coordination visibility, built for decisions, not reports",
     problem: "Leadership relies on retrospective summaries to understand operational state. By the time a bottleneck appears in a weekly report, it has already cascaded into margin erosion, missed service levels, or expediting costs. Operations are managed reactively because the real-time picture doesn't exist.",
-    whyExists: "Operational data exists but remains trapped in isolated systems — separate software tools, field devices, local spreadsheets. Aggregating it into a usable view requires manual effort that nobody has time for, so it never gets built.",
-    approach: "We design and build a unified operational visibility layer. We extract data from your existing endpoints — ERP, fleet systems, field devices, spreadsheets — and structure it into a real-time coordination dashboard built around the specific decisions your team needs to make. No generic templates.",
-    afterState: "A live operational view. Managers see coordination status, active deviations, and bottlenecks in real time — enabling corrective action in the moment. Staff stop coordinating by phone call and start working from a shared operational picture.",
+    whyExists: "Operational data exists but remains trapped in isolated systems: separate software tools, field devices, local spreadsheets. Aggregating it into a usable view requires manual effort that nobody has time for, so it never gets built.",
+    approach: "We design and build a unified operational visibility layer. We extract data from your existing endpoints (ERP, fleet systems, field devices, spreadsheets) and structure it into a real-time coordination dashboard built around the specific decisions your team needs to make. No generic templates.",
+    afterState: "A live operational view. Managers see coordination status, active deviations, and bottlenecks in real time, enabling corrective action in the moment. Staff stop coordinating by phone call and start working from a shared operational picture.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Services() {
             className="max-w-sm text-sm dark:text-ink-300 text-ink-400 leading-relaxed md:text-right"
           >
             Every engagement starts with the Diagnostic. The Blueprint and Dashboard
-            follow from what the Diagnostic uncovers — not before.
+            follow from what the Diagnostic uncovers, not before.
           </motion.p>
         </div>
 

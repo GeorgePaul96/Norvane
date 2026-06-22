@@ -99,7 +99,7 @@ export default function Problem() {
             className="text-lg dark:text-ink-300 text-ink-400 leading-relaxed"
           >
             Businesses rarely break because of incapable people or insufficient capital. They break
-            in the invisible gaps between departments—where undocumented processes, manual data entry,
+            in the invisible gaps between departments, where undocumented processes, manual data entry,
             and isolated tracking systems replace deliberate coordination.
           </motion.p>
         </div>
@@ -155,7 +155,7 @@ export default function Problem() {
           className="mt-16 p-8 rounded-xl border dark:border-white/[0.04] border-black/[0.04] dark:bg-surface-850/20 bg-white/30 flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed max-w-2xl">
-            If this describes your operation, a structured diagnostic is the right starting point —
+            If this describes your operation, a structured diagnostic is the right starting point,
             not more software.
           </p>
           <a

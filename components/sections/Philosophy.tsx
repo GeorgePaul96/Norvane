@@ -17,17 +17,17 @@ const beliefs = [
   {
     statement: "Visibility before automation.",
     elaboration:
-      "Automating a blind, chaotic process simply generates coordination failures at a higher velocity. Organizations must first establish transparent operational visibility—knowing exactly what is happening in real-time—before delegating decisions to automated routines.",
+      "Automating a blind, chaotic process simply generates coordination failures at a higher velocity. Organizations must first establish transparent operational visibility, knowing exactly what is happening in real-time, before delegating decisions to automated routines.",
   },
   {
     statement: "Coordination over complexity.",
     elaboration:
-      "When teams lack a shared operational picture, they drift into reactive troubleshooting. True efficiency is the quiet result of clean, predictable handoffs — not harder work or more sophisticated tools.",
+      "When teams lack a shared operational picture, they drift into reactive troubleshooting. True efficiency is the quiet result of clean, predictable handoffs, not harder work or more sophisticated tools.",
   },
   {
     statement: "Intelligence that creates operational agency.",
     elaboration:
-      "Data reporting that no one acts upon is not operational intelligence—it is noise. Dashboards are only valuable if they supply execution teams with the agency and information required to make a corrective decision in the moment, not 30 days later.",
+      "Data reporting that no one acts upon is not operational intelligence. It is noise. Dashboards are only valuable if they supply execution teams with the agency and information required to make a corrective decision in the moment, not 30 days later.",
   },
 ];
 

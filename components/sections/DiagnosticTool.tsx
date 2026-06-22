@@ -111,7 +111,7 @@ const SIGNALS: DiagnosticSignal[] = [
   {
     id: "exec-2", category: "execution", weight: 25,
     operationalTerm: "inconsistent process compliance",
-    label: "Process compliance is inconsistent — different operators follow different versions of the same workflow.",
+    label: "Process compliance is inconsistent. Different operators follow different versions of the same workflow.",
   },
   {
     id: "exec-3", category: "execution", weight: 25,
@@ -129,13 +129,13 @@ const SIGNALS: DiagnosticSignal[] = [
 
 interface CategoryResult {
   category: RiskCategory;
-  /** 0–100, derived purely from selected signal weights within the category */
+  /** 0-100, derived purely from selected signal weights within the category */
   score: number;
   selectedSignals: DiagnosticSignal[];
 }
 
 interface AssessmentResult {
-  /** 0–100, weighted average across all category scores */
+  /** 0-100, weighted average across all category scores */
   overallScore: number;
   categoryResults: CategoryResult[];
   /** Top 3 selected signals by effective contribution (signal.weight × category.weight) */
@@ -195,7 +195,7 @@ function getRiskLevel(score: number): { label: string; description: string } {
     description: "No significant coordination vulnerabilities identified across the four risk dimensions.",
   };
   if (score < 25) return {
-    label: "Low–Moderate",
+    label: "Low-Moderate",
     description: "Isolated gaps are present. Address key dependencies before scaling volume.",
   };
   if (score < 45) return {
@@ -307,7 +307,7 @@ export default function DiagnosticTool() {
         {/* Grid */}
         <div className="grid lg:grid-cols-12 gap-10 items-start">
 
-          {/* LEFT — Signals grouped by category */}
+          {/* LEFT: Signals grouped by category */}
           <div className="lg:col-span-7 flex flex-col gap-8">
             {CATEGORIES.map((cat) => {
               const catSignals = SIGNALS.filter((s) => s.category === cat.id);
@@ -396,7 +396,7 @@ export default function DiagnosticTool() {
             })}
           </div>
 
-          {/* RIGHT — Score panel */}
+          {/* RIGHT: Score panel */}
           <div className="lg:col-span-5 lg:sticky lg:top-24">
             <div className="p-7 rounded-xl dark:bg-surface-900 bg-surface-50 border dark:border-white/[0.06] border-black/[0.06] shadow-lg shadow-black/10 flex flex-col gap-0">
 
@@ -528,7 +528,7 @@ export default function DiagnosticTool() {
               {result.selectedCount === 0 && (
                 <div className="flex gap-2.5 items-start text-xs dark:text-ink-400 text-ink-500 mb-6">
                   <HelpCircle size={13} className="flex-shrink-0 mt-0.5 dark:text-ink-500 text-ink-400" />
-                  <span>Select any signal above. Your weighted risk profile updates in real time — each item adds its proportional score.</span>
+                  <span>Select any signal above. Your weighted risk profile updates in real time, and each item adds its proportional score.</span>
                 </div>
               )}
 

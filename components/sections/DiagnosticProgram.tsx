@@ -8,7 +8,7 @@ const diagnosticSteps = [
   {
     step: "01",
     phase: "Discovery & Handoff Audit",
-    duration: "Weeks 1–2",
+    duration: "Weeks 1-2",
     icon: MapPin,
     description:
       "We embed with your execution team to observe frontline operations. We shadow schedulers, trace inventory states, map data-flow paths, and inventory all active localized spreadsheets and verbal workarounds.",
@@ -16,7 +16,7 @@ const diagnosticSteps = [
   {
     step: "02",
     phase: "Bottleneck & Coordination Risk Mapping",
-    duration: "Weeks 3–4",
+    duration: "Weeks 3-4",
     icon: ShieldAlert,
     description:
       "We catalog every operational handover, check for manual copy-paste reconciliation loops, and identify key-person dependencies that threaten process stability.",
@@ -24,7 +24,7 @@ const diagnosticSteps = [
   {
     step: "03",
     phase: "Modernization Roadmap & Specification",
-    duration: "Weeks 5–6",
+    duration: "Weeks 5-6",
     icon: Cpu,
     description:
       "We design the improved systems architecture. We outline the integration bridges, custom tooling, communication cadences, and priority process changes inside a concrete execution blueprint.",
@@ -178,7 +178,7 @@ export default function DiagnosticProgram() {
             <div className="flex items-center gap-3">
               <Calendar size={18} className="dark:text-steel-500 text-steel-400" />
               <div className="text-xs dark:text-ink-300 text-ink-500">
-                <strong>Fixed fee, fixed scope.</strong> 4–6 week timeline. No open-ended billing — the engagement cost is agreed upfront based on operation size.
+                <strong>Fixed fee, fixed scope.</strong> 4 to 6 week timeline. No open-ended billing. The engagement cost is agreed upfront based on operation size.
               </div>
             </div>
             <a

@@ -32,7 +32,7 @@ const ALLOWED_CHALLENGES = new Set([
 
 // ── Rate limiter ──────────────────────────────────────────────────────────────
 // In-memory store keyed by IP. Resets on server restart.
-// For Vercel serverless, each cold start creates a new store — this still
+// For Vercel serverless, each cold start creates a new store; this still
 // limits bursts within a single instance. For persistent cross-instance limits,
 // swap this for Upstash Redis or Vercel KV.
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
       role = "",
       challenge = "",
       message,
-      // honeypot field — bots fill this, humans never see it
+      // honeypot field: bots fill this, humans never see it
       website = "",
     } = body as Record<string, unknown>;
 
@@ -172,7 +172,7 @@ export async function POST(request: NextRequest) {
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({
     //   from: "contact@norvane.com",
-    //   to: "hello@norvane.com",
+    //   to: "hello@hello.norvane.uk",
     //   subject: `New inquiry from ${submission.name} at ${submission.company}`,
     //   text: [
     //     `Name: ${submission.name}`,

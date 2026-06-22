@@ -224,7 +224,7 @@ export default function CaseStudies() {
             <div className="mt-10 p-5 rounded-lg dark:bg-surface-850 bg-white border dark:border-white/5 border-black/5 flex items-center justify-between flex-wrap gap-4">
               <div className="text-xs dark:text-ink-300 text-ink-400 leading-relaxed max-w-xl">
                 Every operation breaks in its own way. Our fixed-scope Diagnostic maps your specific
-                processes to locate exactly where coordination is failing — and what it's costing.
+                processes to locate exactly where coordination is failing, and what it's costing.
               </div>
               <a
                 href="#diagnostic"

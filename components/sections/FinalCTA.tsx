@@ -12,7 +12,7 @@ interface FormData {
   role: string;
   challenge: string;
   message: string;
-  website: string; // honeypot — never shown to humans
+  website: string; // honeypot, never shown to humans
 }
 
 const roleOptions = [
@@ -36,7 +36,7 @@ const challengeOptions = [
 const trustItems = [
   {
     title: "Response within 24 hours",
-    body: "Every inquiry gets a direct reply — not an automated sequence.",
+    body: "Every inquiry gets a direct reply, not an automated sequence.",
   },
   {
     title: "No obligation",
@@ -147,7 +147,7 @@ export default function FinalCTA() {
               className="text-lg dark:text-ink-300 text-ink-400 leading-relaxed mb-10"
             >
               Every engagement starts with a structured conversation. Tell us what you're dealing
-              with — we'll tell you honestly whether we can help, and how.
+              with, and we'll tell you honestly whether we can help, and how.
             </motion.p>
 
             <motion.div
@@ -172,14 +172,14 @@ export default function FinalCTA() {
             </motion.div>
 
             <motion.a
-              href="mailto:hello@norvane.com"
+              href="mailto:hello@hello.norvane.uk"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.45 }}
               className="inline-flex items-center gap-2 text-sm dark:text-steel-400 text-steel-600 hover:underline underline-offset-4 transition-all duration-200"
             >
               <Mail size={14} />
-              hello@norvane.com
+              hello@hello.norvane.uk
             </motion.a>
           </div>
 
@@ -207,7 +207,7 @@ export default function FinalCTA() {
                       Message received
                     </h3>
                     <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed max-w-xs">
-                      We'll review your message and respond within 24 hours. Check your inbox —
+                      We'll review your message and respond within 24 hours. Check your inbox;
                       we'll reach out directly.
                     </p>
                     <button
@@ -228,7 +228,7 @@ export default function FinalCTA() {
                     noValidate
                     className="flex flex-col gap-5"
                   >
-                    {/* Honeypot — hidden from humans, bots fill it */}
+                    {/* Honeypot: hidden from humans, bots fill it */}
                     <div aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none">
                       <label htmlFor="website">Website</label>
                       <input
@@ -328,7 +328,7 @@ export default function FinalCTA() {
                         Message <span className="dark:text-steel-500 text-steel-600">*</span>
                       </label>
                       <textarea
-                        placeholder="Describe your operational situation — what's creating friction, what's invisible, or what you're trying to stabilize."
+                        placeholder="Describe your operational situation. What's creating friction, what's invisible, or what you're trying to stabilize?"
                         value={formData.message}
                         onChange={(e) =>
                           setFormData((p) => ({ ...p, message: e.target.value }))
@@ -348,10 +348,10 @@ export default function FinalCTA() {
                       <p className="text-xs dark:text-red-400 text-red-600 leading-relaxed">
                         Something went wrong. Please try again or email us directly at{" "}
                         <a
-                          href="mailto:hello@norvane.com"
+                          href="mailto:hello@hello.norvane.uk"
                           className="underline underline-offset-2"
                         >
-                          hello@norvane.com
+                          hello@hello.norvane.uk
                         </a>
                       </p>
                     )}

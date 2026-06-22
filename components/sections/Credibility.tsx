@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 const statements = [
   {
     headline: "We do not start with software.",
-    body: "Technology is an amplifier, not a solution. We begin by understanding the underlying operational structure—who decides what, when, and based on which information.",
+    body: "Technology is an amplifier, not a solution. We begin by understanding the underlying operational structure: who decides what, when, and based on which information.",
   },
   {
     headline: "Most operational failures are coordination failures.",
@@ -97,7 +97,7 @@ export default function Credibility() {
             className="mt-4 text-lg dark:text-ink-300 text-ink-400 leading-relaxed"
           >
             We hold a few foundational beliefs that shape every engagement. Not principles for the
-            sake of them — perspectives earned from working inside operationally complex businesses.
+            sake of them, but perspectives earned from working inside operationally complex businesses.
           </motion.p>
         </div>
 

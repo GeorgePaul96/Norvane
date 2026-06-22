@@ -25,7 +25,7 @@ const phases = [
     title: "Structure",
     tagline: "Design custom operational architecture",
     description:
-      "We design the optimized operational system—process paths, scheduling buffers, coordination cadences, database integrations, and custom internal tools—specifically structured to solve your bottlenecks.",
+      "We design the optimized operational system, including process paths, scheduling buffers, coordination cadences, database integrations, and custom internal tools, specifically structured to solve your bottlenecks.",
     outputs: ["To-Be System Specification", "Database Schema & Bridge Designs", "Custom Tooling Prototypes"],
   },
   {
@@ -94,7 +94,7 @@ export default function Methodology() {
           </motion.p>
         </div>
 
-        {/* Phase selector — desktop horizontal timeline */}
+        {/* Phase selector: desktop horizontal timeline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

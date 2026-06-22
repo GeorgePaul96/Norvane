@@ -1,5 +1,5 @@
 /**
- * Norvane N lettermark — geometric N with the depth face on the right stroke.
+ * Norvane N lettermark: geometric N with the depth face on the right stroke.
  *
  * Proportions derived from the brand logo:
  *  - Post width: ~21 units (each)
@@ -11,7 +11,7 @@
  * text color class (e.g. `dark:text-ink-100 text-ink-900`).
  *
  * The depth face uses `opacity="0.45"` on the same currentColor, which renders
- * as a mid-gray in both dark and light contexts — matching the logo's shadow.
+ * as a mid-gray in both dark and light contexts, matching the logo's shadow.
  */
 
 interface LogoMarkProps {
@@ -34,13 +34,13 @@ export function LogoMark({ className = "", height = 28 }: LogoMarkProps) {
       {/* Left vertical post */}
       <rect x="0" y="0" width="21" height="112" />
 
-      {/* Diagonal band — parallelogram connecting the two posts */}
+      {/* Diagonal band: parallelogram connecting the two posts */}
       <polygon points="21,0 43,0 79,112 57,112" />
 
-      {/* Right post — front face */}
+      {/* Right post: front face */}
       <rect x="79" y="0" width="21" height="112" />
 
-      {/* Right post — depth/shadow face (the 3D signature of the mark) */}
+      {/* Right post: depth/shadow face (the 3D signature of the mark) */}
       {/* Parallelogram on the right edge, cut at top following the diagonal */}
       <polygon points="100,0 107,0 107,112 100,112" opacity="0.45" />
       {/* Chamfer: angled top connecting front face to depth face */}
@@ -52,7 +52,7 @@ export function LogoMark({ className = "", height = 28 }: LogoMarkProps) {
 interface LogoFullProps {
   className?: string;
   height?: number;
-  /** Hide the wordmark — show only the N mark */
+  /** Hide the wordmark, show only the N mark */
   markOnly?: boolean;
 }
 

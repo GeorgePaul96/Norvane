@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight, AlertTriangle, CheckCircle, Clock } from "lucide-react";
 
 const operationRows = [
-  { ref: "OP-2841", label: "Outbound delivery — Site A", status: "on-track", time: "14:30" },
-  { ref: "OP-2842", label: "Facility coordination — Zone 3", status: "on-track", time: "16:00" },
-  { ref: "OP-2843", label: "Field inspection — Block 4", status: "at-risk", time: "17:00" },
-  { ref: "OP-2844", label: "Maintenance — Unit 4", status: "scheduled", time: "09:00 ↑" },
+  { ref: "OP-2841", label: "Outbound delivery, Site A", status: "on-track", time: "14:30" },
+  { ref: "OP-2842", label: "Facility coordination, Zone 3", status: "on-track", time: "16:00" },
+  { ref: "OP-2843", label: "Field inspection, Block 4", status: "at-risk", time: "17:00" },
+  { ref: "OP-2844", label: "Maintenance, Unit 4", status: "scheduled", time: "09:00 ↑" },
 ];
 
 const statusConfig: Record<string, { label: string; dot: string; text: string }> = {
@@ -94,7 +94,7 @@ function OperationalPreview() {
         className="mx-4 mb-4 flex items-center gap-2 p-2.5 rounded-lg dark:bg-amber-500/8 bg-amber-500/5 border dark:border-amber-500/15 border-amber-500/10"
       >
         <AlertTriangle size={12} className="dark:text-amber-400 text-amber-600 flex-shrink-0" />
-        <span className="text-2xs dark:text-amber-300 text-amber-700">Block 4 inspection running 40 min late — downstream rescheduling required</span>
+        <span className="text-2xs dark:text-amber-300 text-amber-700">Block 4 inspection running 40 min late, downstream rescheduling required</span>
       </motion.div>
     </div>
   );
@@ -176,7 +176,7 @@ export default function Hero() {
               className="text-lg md:text-xl dark:text-ink-300 text-ink-400 leading-relaxed mb-10 max-w-xl"
             >
               We map localized workflows, replace fragile spreadsheets, and build coordination
-              systems your frontline teams actually use — for agriculture, logistics, and field
+              systems your frontline teams actually use, for agriculture, logistics, and field
               operations.
             </motion.p>
 

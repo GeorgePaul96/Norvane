@@ -31,7 +31,7 @@ const weeklyBarData = [
 
 const flagsData = [
   { level: "warning", message: "Zone C team running 40 min behind schedule" },
-  { level: "error", message: "Unit 4 parts reorder — supplier delay confirmed" },
+  { level: "error", message: "Unit 4 parts reorder: supplier delay confirmed" },
   { level: "success", message: "Site A delivery completed ahead of window" },
 ];
 
@@ -115,7 +115,7 @@ export default function Dashboard() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-sm text-sm dark:text-ink-300 text-ink-400 leading-relaxed md:text-right"
           >
-            The dashboards we design surface operational reality — not vanity metrics. Built on your
+            The dashboards we design surface operational reality, not vanity metrics. Built on your
             existing data sources, without replacing the systems you already run.
           </motion.p>
         </div>
@@ -137,7 +137,7 @@ export default function Dashboard() {
                 <div className="w-3 h-3 rounded-full dark:bg-white/[0.06] bg-black/[0.1]" />
               </div>
               <span className="text-2xs dark:text-ink-400 text-ink-400 font-medium">
-                Coordination Dashboard — Live View
+                Coordination Dashboard / Live View
               </span>
             </div>
             <div className="flex items-center gap-1.5">

@@ -38,13 +38,13 @@ export default function Footer() {
             </div>
             <p className="text-sm dark:text-ink-300 text-ink-400 leading-relaxed max-w-xs mb-6">
               Diagnostics-led operations consultancy. We map broken processes and build the
-              coordination systems that replace them — for agriculture and logistics businesses.
+              coordination systems that replace them, for agriculture and logistics businesses.
             </p>
             <a
-              href="mailto:hello@norvane.com"
+              href="mailto:hello@hello.norvane.uk"
               className="text-sm dark:text-steel-400 text-steel-600 hover:underline underline-offset-4 transition-all duration-200"
             >
-              hello@norvane.com
+              hello@hello.norvane.uk
             </a>
           </div>
 
